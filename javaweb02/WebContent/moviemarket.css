@@ -1,0 +1,13 @@
+@charset "UTF-8";
+body{
+	background-no-repeat : url("/images/movie.png");
+	
+	font-style : oblique;
+	font-weight : bold;
+	font-size : xx-large;
+	color : blue;
+}
+		
+
+
+
