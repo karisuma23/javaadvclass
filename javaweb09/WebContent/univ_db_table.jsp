@@ -5,13 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>테이블 만들기 </title>
 </head>
 <body>
 <%
-
-request.setCharacterEncoding("UTF-8");
-
 
 // JDBC 드라이버 로딩
 
@@ -20,7 +17,7 @@ String driverClass = "";
 Class.forName("com.mysql.jdbc.Driver");	
 
 // DB연결
-   String url = "jdbc:mysql://localhost:3306/school";
+   String url = "jdbc:mysql://localhost:3306/university";
    String id = "root";
    String pw = "0000";
    
@@ -30,19 +27,18 @@ Class.forName("com.mysql.jdbc.Driver");
    
    conn = DriverManager.getConnection(url, id, pw);
    
-// 테이블 데이터 넣는 SQL
+// 테이블 만들기 SQL
 
-   String sabun = request.getParameter("sabun");
-   String name = request.getParameter("name");
-   String dept = request.getParameter("dept");
-   
-   
+  String sql = "CREATE TABLE student("
+			+"hakbun int not null,"
+			+"name   varchar(10),"
+			+"gender varchar(10),"
+			+"year   tinyint,"
+			+"dept   varchar(20),"
+			+"addr   varchar(50),"
+			+"primary key(hakbun))";
 
-   String sql = "INSERT INTO emp VALUES(?,?,?)";
    pstmt = conn.prepareStatement(sql);
-      pstmt.setString(1, sabun);
-      pstmt.setString(2, name);
-      pstmt.setString(3, dept);   
    pstmt.executeUpdate(); 
 
 // DB 연결 종료
@@ -51,8 +47,7 @@ Class.forName("com.mysql.jdbc.Driver");
 	  
 
   
-  response.sendRedirect("db_emp_input.html");
-  
 %>
+
 </body>
 </html>

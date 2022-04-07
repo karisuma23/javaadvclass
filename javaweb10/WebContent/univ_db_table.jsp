@@ -17,7 +17,7 @@ String driverClass = "";
 Class.forName("com.mysql.jdbc.Driver");	
 
 // DB연결
-   String url = "jdbc:mysql://localhost:3306/school";
+   String url = "jdbc:mysql://localhost:3306/university";
    String id = "root";
    String pw = "0000";
    
@@ -29,15 +29,14 @@ Class.forName("com.mysql.jdbc.Driver");
    
 // 테이블 만들기 SQL
 
-  String sql = "CREATE TABLE emp("
-			+"sabun int not null,"
+  String sql = "CREATE TABLE student("
+			+"hakbun int not null,"
 			+"name   varchar(10),"
+			+"gender varchar(10),"
+			+"year   tinyint,"
 			+"dept   varchar(20),"
-			+"primary key(sabun))";
-
-
-  
-
+			+"addr   varchar(50),"
+			+"primary key(hakbun))";
 
    pstmt = conn.prepareStatement(sql);
    pstmt.executeUpdate(); 
