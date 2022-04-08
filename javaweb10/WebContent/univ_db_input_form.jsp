@@ -13,8 +13,8 @@
 
 <%@ include file = "menu.jsp"%>
 
-<div class = "container bg-warning shadow mx-auto mt-5 p-5 w-75">
-<div class="alert alert-primary" role="alert">  
+<div class = "container bg-info shadow mx-auto mt-5 p-5 w-75">
+<div class="alert alert-info" role="alert">  
 <p class="text-center"> 학생 정보 입력 </p>
 </div>
    <form class="row g-3" action="univ_db_input.jsp" method="post">

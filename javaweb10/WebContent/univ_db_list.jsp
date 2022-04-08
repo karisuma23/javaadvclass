@@ -33,11 +33,11 @@
 </form>
    
    
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <p class ="text-center">학생 정보 입력</p>
 </div>
    
-   <div class = "container bg-warning shadow mx-auto mt-5 p-5 w-75">
+   <div class = "container bg-info shadow mx-auto mt-5 p-5 w-75">
    
    
    <table class="table table-striped table-hover">

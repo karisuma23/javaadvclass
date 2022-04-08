@@ -26,11 +26,11 @@ if ((hakbun != null) && (name != null)){
 
 <%@ include file = "menu.jsp"%>
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
 <p class ="text-center">로그인</p>
 </div>
    
-   <div class = "container bg-warning shadow mx-auto mt-5 p-5 w-75">
+   <div class = "container bg-info shadow mx-auto mt-5 p-5 w-75">
 
 
 <form action = "univ_db_std_check.jsp" method = "POST">
